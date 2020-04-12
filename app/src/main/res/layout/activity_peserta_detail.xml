@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    tools:context=".ui.peserta.PesertaDetail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/img_detail_photo"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="centerCrop"
+            tools:src="@color/colorAccent" />
+        <TextView
+            android:id="@+id/tv_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Nama Peserta" />
+
+        <TextView
+            android:id="@+id/tv_detail_nik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Nomer NIK" />
+
+        <TextView
+            android:id="@+id/tv_detail_kk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_nik"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Nomer KK" />
+
+        <TextView
+            android:id="@+id/tv_detail_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:layout_below="@id/tv_detail_kk"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Tempat Lahir" />
+
+        <TextView
+            android:id="@+id/tv_detail_tl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:layout_below="@id/tv_detail_tempat"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Tanggal Lahir" />
+
+        <TextView
+            android:id="@+id/tv_detail_kelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:layout_below="@id/tv_detail_tl"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Jenis Kelamin" />
+
+        <TextView
+            android:id="@+id/tv_detail_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:layout_below="@id/tv_detail_kelamin"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Status" />
+
+        <TextView
+            android:id="@+id/tv_detail_agama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:layout_below="@id/tv_detail_status"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Agama" />
+
+        <TextView
+            android:id="@+id/tv_detail_terdaftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:layout_below="@id/tv_detail_agama"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Tanggal Terdaftar" />
+
+        <TextView
+            android:id="@+id/tv_detail_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_detail_photo"
+            android:layout_below="@id/tv_detail_terdaftar"
+            android:ellipsize="end"
+            android:maxLines="5"
+            tools:text="Alamat" />
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detail_alamat"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_hapus_peserta"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hapus"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

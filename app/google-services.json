@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "257442238406",
+    "firebase_url": "https://lembaga-sosial-dan-kematian.firebaseio.com",
+    "project_id": "lembaga-sosial-dan-kematian",
+    "storage_bucket": "lembaga-sosial-dan-kematian.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257442238406:android:e12a47fe067c57b12b6cc7",
+        "android_client_info": {
+          "package_name": "com.example.lembagasosialkematian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257442238406-n6j3l5s1do0idv5q9ag8orq2t1jkso2j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNpakICMuqdzN2hSUL7NURmWXwSDNOQVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257442238406-n6j3l5s1do0idv5q9ag8orq2t1jkso2j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
