@@ -10,7 +10,7 @@
     android:layout_marginTop="4dp"
     android:layout_marginRight="8dp"
     android:layout_marginBottom="4dp"
-    tools:context=".ui.peserta.PesertaDetail">
+    tools:context=".ui.berhenti.MeninggalDetail">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:text="Nama"/>
 
             <TextView
-                android:id="@+id/tv_detail_name"
+                android:id="@+id/tv_detailmeninggal_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:text="NIK"/>
             <TextView
-                android:id="@+id/tv_detail_nik"
+                android:id="@+id/tv_detailmeninggal_nik"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nomer KK"/>
             <TextView
-                android:id="@+id/tv_detail_kk"
+                android:id="@+id/tv_detailmeninggal_kk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tempat Lahir"/>
             <TextView
-                android:id="@+id/tv_detail_tempat"
+                android:id="@+id/tv_detailmeninggal_tempat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tanggal Lahir"/>
             <TextView
-                android:id="@+id/tv_detail_tl"
+                android:id="@+id/tv_detailmeninggal_tl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:text="Jenis Kelamin"/>
             <TextView
-                android:id="@+id/tv_detail_kelamin"
+                android:id="@+id/tv_detailmeninggal_kelamin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:text="Status"/>
             <TextView
-                android:id="@+id/tv_detail_status"
+                android:id="@+id/tv_detailmeninggal_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -143,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:text="Agama"/>
             <TextView
-                android:id="@+id/tv_detail_agama"
+                android:id="@+id/tv_detailmeninggal_agama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:text="Terdaftar"/>
             <TextView
-                android:id="@+id/tv_detail_terdaftar"
+                android:id="@+id/tv_detailmeninggal_terdaftar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -175,27 +175,22 @@
                 android:layout_height="wrap_content"
                 android:text="Alamat"/>
             <TextView
-                android:id="@+id/tv_detail_alamat"
+                android:id="@+id/tv_detailmeninggal_alamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 tools:text="Alamat" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_hapus_peserta"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:text="Edit"
-            android:textSize="12sp" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_hapus_peserta"-->
+<!--            style="@style/Widget.AppCompat.Button.Colored"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Edit"-->
+<!--            android:textSize="12sp" />-->
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_anggota"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_anggota" />
 </LinearLayout>

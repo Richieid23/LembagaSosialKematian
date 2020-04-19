@@ -39,7 +39,6 @@ public class PesertaTambah extends AppCompatActivity {
     private RadioButton rbLaki, rbPerempuan, rbKk, rbAnggota;
     private TextView tvDusun;
     Spinner spDusun;
-    int dsn;
 
     String[] dusun = {"Subahnala 1", "Subahnala 2", "Sandik",
             "Dumpu", "Selojan", "Penyengak", "Peresak Daye",
@@ -86,7 +85,7 @@ public class PesertaTambah extends AppCompatActivity {
         btSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loading = ProgressDialog.show(PesertaTambah.this,"Menambahkan...","Tunggu...",false,true);
+                loading = ProgressDialog.show(PesertaTambah.this,"Menambahkan...","Tunggu...",false,false);
                 String nomerKK = etNoKK.getText().toString();
                 String nomerNik = etNik.getText().toString();
                 String nama = etNama.getText().toString();

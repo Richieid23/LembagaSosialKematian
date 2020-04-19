@@ -4,15 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.sumbangan.SumbanganDetail">
 
-    <ImageView
-        android:id="@+id/foto"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sumbangandetail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/logo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="236dp" />
+        tools:listitem="@layout/item_sumbangan_detail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

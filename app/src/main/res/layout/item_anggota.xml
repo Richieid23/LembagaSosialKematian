@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cv_peserta"
+    android:id="@+id/cv_anggota"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
@@ -18,35 +18,35 @@
         android:layout_height="125dp"
         android:padding="8dp">
         <ImageView
-            android:id="@+id/img_peserta_photo"
+            android:id="@+id/img_anggota_photo"
             android:layout_width="100dp"
             android:layout_height="120dp"
             android:layout_marginBottom="4dp"
             android:scaleType="centerCrop"
             tools:src="@color/colorAccent" />
         <TextView
-            android:id="@+id/tv_nama_peserta"
+            android:id="@+id/tv_nama_anggota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="3dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="8dp"
-            android:layout_toEndOf="@id/img_peserta_photo"
-            android:layout_toRightOf="@id/img_peserta_photo"
+            android:layout_toEndOf="@id/img_anggota_photo"
+            android:layout_toRightOf="@id/img_anggota_photo"
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="Nama Peserta" />
         <TextView
-            android:id="@+id/tv_nik_peserta"
+            android:id="@+id/tv_nik_anggota"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/layout_button"
-            android:layout_below="@id/tv_nama_peserta"
+            android:layout_below="@id/tv_nama_anggota"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_toEndOf="@id/img_peserta_photo"
-            android:layout_toRightOf="@id/img_peserta_photo"
+            android:layout_toEndOf="@id/img_anggota_photo"
+            android:layout_toRightOf="@id/img_anggota_photo"
             android:ellipsize="end"
             android:maxLines="5"
             tools:text="Nomer Peserta" />
@@ -58,11 +58,11 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_toEndOf="@id/img_peserta_photo"
-            android:layout_toRightOf="@id/img_peserta_photo"
+            android:layout_toEndOf="@id/img_anggota_photo"
+            android:layout_toRightOf="@id/img_anggota_photo"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/btn_peserta_detail"
+                android:id="@+id/btn_anggota_detail"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 android:text="Detail"
                 android:textSize="12sp" />
             <Button
-                android:id="@+id/btn_peserta_hapus"
+                android:id="@+id/btn_anggota_hapus"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

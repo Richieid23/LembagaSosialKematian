@@ -11,7 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.peserta.PesertaDetail"></activity>
+        <activity android:name=".ui.pengeluaran.PengeluaranTambah"></activity>
+        <activity android:name=".ui.berhenti.MeninggalDetail" />
+        <activity android:name=".ui.sumbangan.SumbanganTambah" />
+        <activity android:name=".ui.sumbangan.SumbanganDetail" />
+        <activity android:name=".ui.peserta.PesertaUpdate" />
+        <activity android:name=".ui.peserta.PesertaDetail" />
         <activity android:name=".ui.peserta.PesertaTambah" />
         <activity
             android:name=".NavDrawer"

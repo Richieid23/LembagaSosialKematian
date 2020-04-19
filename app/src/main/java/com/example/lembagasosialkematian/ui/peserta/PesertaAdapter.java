@@ -43,6 +43,7 @@ public class PesertaAdapter extends FirestoreRecyclerAdapter<Peserta, PesertaAda
         });
     }
 
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

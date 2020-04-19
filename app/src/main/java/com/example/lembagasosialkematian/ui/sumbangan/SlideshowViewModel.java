@@ -1,4 +1,4 @@
-package com.example.lembagasosialkematian.ui.slideshow;
+package com.example.lembagasosialkematian.ui.sumbangan;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -38,19 +38,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressDialog = ProgressDialog.show(MainActivity.this, "LOGIN...","Tunggu...",false,true);
-//                firebaseAuth.signInWithEmailAndPassword(etNik.getText().toString(),etPass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//
-//                        if(task.isSuccessful()){
+                firebaseAuth.signInWithEmailAndPassword(etNik.getText().toString(),etPass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if(task.isSuccessful()){
                             Intent intent = new Intent(MainActivity.this, NavDrawer.class);
                             startActivity(intent);
-//                        }else{
-//                            progressDialog.dismiss();;
-//                            Toast.makeText(MainActivity.this,task.getException().getMessage(), Toast.LENGTH_LONG).show();
-//                        }
-//                    }
-//                });
+                        }else{
+                            progressDialog.dismiss();;
+                            Toast.makeText(MainActivity.this,task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
             }
         });
     }

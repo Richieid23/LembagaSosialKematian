@@ -11,33 +11,49 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
 
-        <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_home_second" />
+<!--        <action-->
+<!--            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"-->
+<!--            app:destination="@id/nav_home_second" />-->
     </fragment>
-    <fragment
-        android:id="@+id/nav_home_second"
-        android:name="com.example.lembagasosialkematian.ui.home.HomeSecondFragment"
-        android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
-        <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
+<!--    <fragment-->
+<!--        android:id="@+id/nav_home_second"-->
+<!--        android:name="com.example.lembagasosialkematian.ui.home.HomeSecondFragment"-->
+<!--        android:label="@string/home_second"-->
+<!--        tools:layout="@layout/fragment_home_second">-->
+<!--        <action-->
+<!--            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"-->
+<!--            app:destination="@id/nav_home" />-->
 
-        <argument
-            android:name="myArg"
-            app:argType="string" />
-    </fragment>
+<!--        <argument-->
+<!--            android:name="myArg"-->
+<!--            app:argType="string" />-->
+<!--    </fragment>-->
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_peserta"
         android:name="com.example.lembagasosialkematian.ui.peserta.PesertaFragment"
-        android:label="@string/menu_gallery"
+        android:label="Peserta"
         tools:layout="@layout/fragment_peserta" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.lembagasosialkematian.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_sumbangan"
+        android:name="com.example.lembagasosialkematian.ui.sumbangan.SumbanganFragment"
+        android:label="Sumbangan"
+        tools:layout="@layout/fragment_sumbangan" />
+
+    <fragment
+        android:id="@+id/nav_berhenti"
+        android:name="com.example.lembagasosialkematian.ui.berhenti.BerhentiFragment"
+        android:label="Berhenti"
+        tools:layout="@layout/fragment_berhenti"/>
+    <fragment
+        android:id="@+id/nav_pemasukan"
+        android:name="com.example.lembagasosialkematian.ui.pemasukan.PemasukanFragment"
+        android:label="Pemasukan"
+        tools:layout="@layout/fragment_pemasukan" />
+    <fragment
+        android:id="@+id/nav_pengeluaran"
+        android:name="com.example.lembagasosialkematian.ui.pengeluaran.PengeluaranFragment"
+        android:label="Pengeluaran"
+        tools:layout="@layout/fragment_pengeluaran" />
 </navigation>

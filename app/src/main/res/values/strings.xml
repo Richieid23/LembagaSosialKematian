@@ -3,8 +3,8 @@
     <string name="title_activity_nav_drawer">NavDrawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Lembaga Sosial Dan Kematian</string>
+    <string name="nav_header_subtitle">Desa Peresak, Kec. Batukliang</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -12,5 +12,27 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
     <string name="home_second">Home Second</string>
+    <string-array name="nama_dusun">
+        <item>Subahnala 1</item>
+        <item>Subahnala 2</item>
+        <item>Sandik</item>
+        <item>Dumpu</item>
+        <item>Selojan</item>
+        <item>Penyengak</item>
+        <item>Peresak Daye</item>
+        <item>Peresak Lauk</item>
+        <item>Bujak Daye</item>
+        <item>Boak</item>
+        <item>Batu Lajan</item>
+        <item>Aik Gering</item>
+        <item>Dasan Aman</item>
+        <item>Pajangan</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

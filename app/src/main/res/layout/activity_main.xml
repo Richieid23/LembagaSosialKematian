@@ -53,7 +53,7 @@
                     android:id="@+id/nik"
                     android:drawableLeft="@drawable/ic_person_add_black_24dp"
                     android:drawableTint="@color/colorPrimaryDark"
-                    android:hint="NIK"
+                    android:hint="Username"
                     android:singleLine="true"
                     android:textColor="#000"/>
             </com.google.android.material.textfield.TextInputLayout>

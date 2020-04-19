@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.peserta.PesertaTambah">
-
+    tools:context=".ui.peserta.PesertaUpdate">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,14 +18,14 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/in_kk"
+            android:id="@+id/ed_kk"
             android:inputType="number"
             android:hint="Nomer KK" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/in_nik"
+            android:id="@+id/ed_nik"
             android:inputType="number"
             android:hint="Nomer NIK" />
 
@@ -35,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/in_nama"
+            android:id="@+id/ed_nama"
             android:inputType="text"
             android:hint="Nama" />
 
@@ -43,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/in_tempat"
+            android:id="@+id/ed_tempat"
             android:inputType="text"
             android:hint="Tempat Lahir" />
 
@@ -51,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/in_tl"
+            android:id="@+id/ed_tl"
             android:inputType="date"
             android:hint="Tanggal Lahir" />
 
@@ -66,19 +64,19 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/in_kelamin"
+            android:id="@+id/ed_kelamin"
             android:orientation="horizontal">
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/lk"
+                android:id="@+id/ed_lk"
                 android:text="Laki-Laki"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/pr"
+                android:id="@+id/ed_pr"
                 android:layout_marginLeft="10dp"
                 android:text="Perempuan"/>
         </RadioGroup>
@@ -94,38 +92,61 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/in_status"
+            android:id="@+id/ed_status"
             android:orientation="horizontal" >
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/rb_kepala"
+                android:id="@+id/rb_edkepala"
                 android:text="Kepala Keluarga"/>
 
             <RadioButton
-                android:id="@+id/rb_anggota"
-                android:layout_width="167dp"
+                android:id="@+id/rb_edanggota"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:text="Anggota Keluarga" />
 
         </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ed_berhenti"
+            android:orientation="horizontal">
 
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_meninggal"
+                android:text="Meninggal"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_pindah"
+                android:layout_marginStart="35dp"
+                android:text="Pindah"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_undurdiri"
+                android:layout_marginStart="25dp"
+                android:text="Undur Diri"/>
+        </RadioGroup>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/in_agama"
+            android:id="@+id/ed_agama"
             android:inputType="text"
             android:hint="Agama" />
 
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/in_terdaftar"
+            android:id="@+id/ed_terdaftar"
             android:inputType="date"
             android:hint="Tanggal Terdaftar" />
 
@@ -139,20 +160,21 @@
             <TextView
                 android:layout_width="200dp"
                 android:layout_height="30dp"
-                android:id="@+id/tv_dusun"/>
+                android:id="@+id/ed_dusun"
+                android:textSize="18sp"
+                android:text="Alamat Dusun" />
 
             <Spinner
                 android:layout_width="150dp"
                 android:layout_height="30dp"
-                android:id="@+id/sp_Dusun"/>
+                android:id="@+id/sp_edDusun"/>
 
         </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_simpan_peserta"
-            android:text="Simpan"/>
+            android:id="@+id/btn_update_peserta"
+            android:text="Update"/>
     </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
