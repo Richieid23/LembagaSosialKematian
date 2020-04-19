@@ -7,26 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ProgressBar;
+import androidx.appcompat.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.lembagasosialkematian.R;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -36,9 +31,6 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import static com.firebase.ui.auth.AuthUI.getApplicationContext;
 
 public class PesertaFragment extends Fragment {
     FloatingActionButton fabTambah;
@@ -47,6 +39,7 @@ public class PesertaFragment extends Fragment {
     private FirestoreRecyclerAdapter adapter;
     private ListenerRegistration firestoreListener;
     private ArrayList<Peserta> listPeserta;
+    SearchView sc;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -56,6 +49,20 @@ public class PesertaFragment extends Fragment {
         rvPeserta = root.findViewById(R.id.rv_peserta);
         rvPeserta.setHasFixedSize(true);
         rvPeserta.setLayoutManager(new LinearLayoutManager(getActivity()));
+        sc = root.findViewById(R.id.action_search);
+
+        sc.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                searchData(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
 
         getPeserta();
         return root;
@@ -172,4 +179,47 @@ public class PesertaFragment extends Fragment {
                     }
                 });
     }
+
+    private void searchData(String query) {
+        Query searchquery = db.collection("Peserta").whereEqualTo("Search", query.toLowerCase());
+        final FirestoreRecyclerOptions<Peserta> options = new FirestoreRecyclerOptions.Builder<Peserta>()
+                .setQuery(searchquery, Peserta.class)
+                .build();
+
+        adapter = new FirestoreRecyclerAdapter<Peserta, DataViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull final DataViewHolder holder, int i, @NonNull final Peserta model) {
+                final Peserta peserta = listPeserta.get(i);
+                holder.tvNama.setText(model.getNama());
+                holder.tvNik.setText(model.getNIK());
+                holder.btDetail.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        detailPeserta(peserta);
+                    }
+                });
+                holder.btHapus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        hapusPeserta(peserta.getNIK());
+                    }
+                });
+            }
+            @NonNull
+            @Override
+            public DataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_peserta, parent, false);
+                return new DataViewHolder(view);
+            }
+
+            @Override
+            public void onError(FirebaseFirestoreException e) {
+                Log.e("error", e.getMessage());
+            }
+        };
+        adapter.notifyDataSetChanged();
+        rvPeserta.setAdapter(adapter);
+        adapter.startListening();
+    }
+
 }

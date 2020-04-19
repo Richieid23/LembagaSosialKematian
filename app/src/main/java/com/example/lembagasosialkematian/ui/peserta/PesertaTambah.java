@@ -129,6 +129,7 @@ public class PesertaTambah extends AppCompatActivity {
                     Map<String, Object> peserta = new HashMap<>();
                     peserta.put("KK", nomerKK);
                     peserta.put("NIK", nomerNik);
+                    peserta.put("Search", nomerNik);
                     peserta.put("Nama", nama);
                     peserta.put("Tempat", tempallhr);
                     peserta.put("TglLahir", tl);
